@@ -19,7 +19,7 @@ public class Main {
 
         for (int i = 0 ; i < randomWord.length(); i++){
 
-            placeHolder[i] = 'X'; // POPULATES THE PLACEHOLDER WITH XXX'S TO BE REVEALED ON CORRECT GUESS
+            placeHolder[i] = '_'; // POPULATES THE PLACEHOLDER WITH XXX'S TO BE REVEALED ON CORRECT GUESS
         }
 
 
@@ -39,7 +39,7 @@ public class Main {
 
                 for(int k = 0 ; k < wordreveal.length; k++ )
                 {
-                    if(placeHolder[placeHolderLocal] == 'X'){
+                    if(placeHolder[placeHolderLocal] == '_'){
                         placeHolder[placeHolderLocal] = verify;
                         System.out.println(placeHolder);
 
