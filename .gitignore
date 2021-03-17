@@ -1,1 +1,4 @@
 *.idea
+outxxx
+outxxx/production/Hangman/com/company/GameBody.class
+outxxx/production/Hangman/com/company/Main.class

@@ -19,7 +19,7 @@ public class Main {
 
         for (int i = 0 ; i < randomWord.length(); i++){
 
-            placeHolder[i] = '_'; // POPULATES THE PLACEHOLDER WITH XXX'S TO BE REVEALED ON CORRECT GUESS
+            placeHolder[i] = '_'; // POPULATES THE PLACEHOLDER WITH ___'S TO BE REVEALED ON CORRECT GUESS
         }
 
 
@@ -30,6 +30,7 @@ public class Main {
             char[] wordreveal  = randomWord.toCharArray(); // TURNS STRING INTO CHAR ARRAY FOR USE
 
             char verify = GameBody.letterVerif(randomWord); // RETURNS LETTER
+            int count = 0 ;
 
 
 
@@ -37,10 +38,19 @@ public class Main {
 
                 int placeHolderLocal = new String(wordreveal).indexOf(verify);// GET THE LOCATION OF THE CORRECT LETTER
 
+                for(int l = 0 ; l < wordreveal.length; l++ )
+                if(wordreveal[l] == verify){
+                    count ++;
+                }
+                System.out.println(count);
+
+
+
                 for(int k = 0 ; k < wordreveal.length; k++ )
                 {
-                    if(placeHolder[placeHolderLocal] == '_'){
-                        placeHolder[placeHolderLocal] = verify;
+
+                    if(wordreveal[k] == verify){
+                        placeHolder[k] = verify;
                         System.out.println(placeHolder);
 
                     }
@@ -51,6 +61,7 @@ public class Main {
                 System.out.println(lifeCount);
 
             }
+
 
 
 

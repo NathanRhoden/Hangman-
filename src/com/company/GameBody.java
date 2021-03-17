@@ -9,7 +9,7 @@ public class GameBody {
 
     public static String wordSelector() {
 
-        String[] words = {"MANGO","PINEAPPLE","PEAR","GRAPE"};
+        String[] words = {"XXXX"};
 
         return words[new Random().nextInt(words.length)];
     }
