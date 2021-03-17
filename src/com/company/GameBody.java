@@ -9,7 +9,7 @@ public class GameBody {
 
     public static String wordSelector() {
 
-        String[] words = {"XXXX"};
+        String[] words = {"PINEAPPLE" , "DOG"};
 
         return words[new Random().nextInt(words.length)];
     }
@@ -19,6 +19,7 @@ public class GameBody {
 
     static char letterVerif(String chosenWord)// RETURNS A CORRECTLY CHOSEN LETTER ,RETURN CHAR 'X' IF INCORRECT
     {
+        int wordLength = chosenWord.length();
         char[] letterSplit = chosenWord.toCharArray(); //CREATES THE CHAR ARRAY
         Scanner userIn = new Scanner(System.in); //SCANNER OBJ
 
