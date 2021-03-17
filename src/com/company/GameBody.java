@@ -1,5 +1,9 @@
 package com.company;
 
+import java.io.BufferedReader;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.IOException;
 import java.util.Random;
 import java.util.Scanner;
 
@@ -7,11 +11,33 @@ public class GameBody {
 
     //SELECTS A RANDOM WORD FROM THE ARRAY
 
-    public static String wordSelector() {
+    public static String wordSelector() { //CHOOSES WORD FROM TXT FILE USING BUFFERED READER
 
-        String[] words = {"PINEAPPLE" , "DOG"};
 
-        return words[new Random().nextInt(words.length)];
+        String path = "C:/Users/Nathan/Desktop/Hangman/words.txt"; // HELP FROM @ALEX LEE
+        String line = "";
+        try {
+            BufferedReader br = new BufferedReader(new FileReader(path));
+
+            while((line = br.readLine()) !=null)
+            {
+                String[] values = line.split("");
+
+            }
+
+
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        System.out.println(line); // NOT CURRENTLY STORING DATA
+
+
+
+        String[] words = {"pineapple"};
+
+
+        return words[new Random().nextInt(words.length)].toUpperCase();
     }
 
 

@@ -15,6 +15,7 @@ public class Main {
 
         GameStart.welcomeMsg(); //SIMPLE GAME MSG
         String randomWord  = GameBody.wordSelector();
+
         char[] placeHolder = new char [randomWord.length()]; // CONTAINS "XXX" TO REVEAL LETTERS FROM WORD REVEAL
         int wordLength = randomWord.length();
         System.out.println("The word has a length of "  + wordLength);
