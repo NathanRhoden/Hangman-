@@ -4,6 +4,8 @@ import java.io.BufferedReader;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
+import java.lang.reflect.Array;
+import java.util.ArrayList;
 import java.util.Random;
 import java.util.Scanner;
 
@@ -14,30 +16,31 @@ public class GameBody {
     public static String wordSelector() { //CHOOSES WORD FROM TXT FILE USING BUFFERED READER
 
 
+
         String path = "C:/Users/Nathan/Desktop/Hangman/words.txt"; // HELP FROM @ALEX LEE
         String line = "";
+
+        ArrayList<String> container = new ArrayList<>(); // ARRAY LIST TO HOLD WORDS WHICH WILL BE RANDOMLY SELECTED
+
         try {
-            BufferedReader br = new BufferedReader(new FileReader(path));
+            BufferedReader br = new BufferedReader(new FileReader(path)); // BUFFERED READER
 
-            while((line = br.readLine()) !=null)
+            while((line = br.readLine()) !=null) // WHILE THERE IS A LINE READ IT
             {
-                String[] values = line.split("");
-
+                container.add(line); // ADDS THE READ LINE TO THE CONTAINER ARRAY LIST
             }
 
 
 
-        } catch (IOException e) {
+        } catch (IOException e) { // WILL THROW UP AN ERROR IF THE TXT FILE CANNOT BE FOUND
             e.printStackTrace();
         }
-        System.out.println(line); // NOT CURRENTLY STORING DATA
+        System.out.println(container);
+
+        Random random = new Random();
 
 
-
-        String[] words = {"pineapple"};
-
-
-        return words[new Random().nextInt(words.length)].toUpperCase();
+        return container.get(random.nextInt(container.size()));
     }
 
 

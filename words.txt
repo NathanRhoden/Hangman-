@@ -1,4 +1,4 @@
-﻿"ability","bowl","angry","peace","observe","balloon"
+﻿ability,bowl,angry,peace,observe,balloon
 "son","busy","forty","village","evidence","free"
 "went","movie","helpful","carry","exchange","lose"
 "young","degree","society","writing","will","machinery"
