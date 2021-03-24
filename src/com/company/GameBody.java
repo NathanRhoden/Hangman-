@@ -14,27 +14,8 @@ public class GameBody {
     public static String wordSelector() { //CHOOSES WORD FROM TXT FILE USING BUFFERED READER
 
 
-        String path = "C:/Users/Nathan/Desktop/Hangman/words.txt"; // HELP FROM @ALEX LEE
-        String line = "";
-        try {
-            BufferedReader br = new BufferedReader(new FileReader(path));
 
-            while((line = br.readLine()) !=null)
-            {
-                String[] values = line.split("");
-
-            }
-
-
-
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-        System.out.println(line); // NOT CURRENTLY STORING DATA
-
-
-
-        String[] words = {"pineapple"};
+        String[] words = {"Draw", "Apple", "Water","Run","Walk"};
 
 
         return words[new Random().nextInt(words.length)].toUpperCase();
@@ -67,4 +48,6 @@ public class GameBody {
         userInput = result;
         return userInput;
     }
+
+
 }

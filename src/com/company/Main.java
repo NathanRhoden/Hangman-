@@ -39,13 +39,12 @@ public class Main {
 
                 int placeHolderLocal = new String(wordreveal).indexOf(verify);// GET THE LOCATION OF THE CORRECT LETTER
 
-                for(int k = 0 ; k < wordreveal.length; k++ )
-                {
+                for(int k = 0 ; k < wordreveal.length; k++ ) {
 
                     if(wordreveal[k] == verify){
                         placeHolder[k] = verify;
-                    }
 
+                    }
                 }
 
                 System.out.println(placeHolder);
@@ -60,6 +59,7 @@ public class Main {
                 }
 
             }
+
 
 
 
